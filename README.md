@@ -16,4 +16,6 @@ Then open `http://localhost:8000`.
 
 ## Deploy with Vercel
 
-Import this repository into Vercel and deploy it with the default settings. Vercel serves the site as a static project, and `vercel.json` keeps the project detail page available at `/project`.
+Import this repository into Vercel and deploy it. The checked-in `vercel.json` runs
+the static-site build, publishes the generated `public` directory, and keeps the
+project detail page available at `/project`.
