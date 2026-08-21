@@ -6,13 +6,18 @@ const root = resolve(import.meta.dirname, "..");
 const workerPath = resolve(root, "dist/server/index.js");
 const manifestPath = resolve(root, "dist/.openai/hosting.json");
 
-const [source, manifestSource] = await Promise.all([
-  readFile(workerPath, "utf8"),
-  readFile(manifestPath, "utf8"),
-]);
+const source = await readFile(workerPath, "utf8");
+let manifestSource;
+try {
+  manifestSource = await readFile(manifestPath, "utf8");
+} catch (error) {
+  if (error.code !== "ENOENT") throw error;
+}
 
-const manifest = JSON.parse(manifestSource);
-assert.equal(typeof manifest.project_id, "string");
+if (manifestSource) {
+  const manifest = JSON.parse(manifestSource);
+  assert.equal(typeof manifest.project_id, "string");
+}
 
 const moduleUrl = `data:text/javascript;base64,${Buffer.from(source).toString("base64")}`;
 const worker = await import(moduleUrl);

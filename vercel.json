@@ -1,5 +1,6 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
+  "buildCommand": "echo 'Static site: no build required'",
   "rewrites": [
     {
       "source": "/project",
