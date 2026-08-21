@@ -3902,7 +3902,7 @@ body.is-scrolling .section-cap i::after { animation: liveTrace 520ms linear infi
   }
 
   #contact .contact-heading { translate: var(--section-x-reverse) 0; }
-  #contact .contact-row { translate: var(--section-x) 0; }
+  #contact .contact-row { translate: 0 0; }
   #contact .social-row { translate: var(--section-x-reverse) 0; }
 }
 
