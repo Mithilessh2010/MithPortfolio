@@ -13,3 +13,7 @@ python3 -m http.server 8000
 ```
 
 Then open `http://localhost:8000`.
+
+## Deploy with Vercel
+
+Import this repository into Vercel and deploy it with the default settings. Vercel serves the site as a static project, and `vercel.json` keeps the project detail page available at `/project`.
