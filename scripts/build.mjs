@@ -43,6 +43,7 @@ const localImages = [
   "assets/logos/pedro-pathing.svg",
   "assets/logos/stang-hacks.webp",
   "assets/logos/pulse.svg",
+  "assets/logos/equal-horizons.svg",
   "assets/logos/breathe.jpg",
   "assets/logos/java.svg",
   "assets/logos/typescript.svg",

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" role="img" aria-labelledby="title desc">
+  <title id="title">Equal Horizons</title>
+  <desc id="desc">A sunrise above two rolling hills</desc>
+  <rect width="160" height="160" rx="36" fill="#f8f4e8"/>
+  <circle cx="80" cy="65" r="28" fill="#f5b942"/>
+  <path d="M16 116c27-34 52-41 76-22 17 13 34 14 52 3v47H16z" fill="#8dc79d"/>
+  <path d="M16 132c29-24 57-27 84-9 14 9 29 11 44 6v15H16z" fill="#315f55"/>
+</svg>
