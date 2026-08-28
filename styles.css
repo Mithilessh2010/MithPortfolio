@@ -3690,6 +3690,54 @@ h1 {
   .team-live-line b { width: 100%; margin-left: 1.35rem; }
 }
 
+/* Final team layout: identity dashboard full-width, details below. */
+#team .team-stage {
+  grid-template-columns: minmax(240px, .58fr) minmax(0, 1.42fr);
+  grid-template-rows: auto auto;
+  gap: clamp(1.5rem, 3vw, 2.75rem);
+  align-items: stretch;
+}
+#team .team-number {
+  grid-column: 1 / -1;
+  grid-row: 1;
+  width: 100%;
+  max-width: 100%;
+}
+#team .team-copy {
+  grid-column: 1;
+  grid-row: 2;
+  align-self: center;
+  width: 100%;
+  padding: 1.5rem 0;
+}
+#team .software-console {
+  grid-column: 2;
+  grid-row: 2;
+  width: 100%;
+  max-width: 100%;
+}
+#team .team-number-core {
+  grid-template-columns: minmax(150px, 210px) minmax(0, 1fr);
+}
+#team .team-identity strong {
+  max-width: 100%;
+  font-size: clamp(4.75rem, 12vw, 9rem);
+  overflow: hidden;
+}
+
+@media (max-width: 900px) {
+  #team .team-stage { grid-template-columns: 1fr; grid-template-rows: auto; padding: clamp(1rem, 4vw, 2rem); }
+  #team .team-number,
+  #team .team-copy,
+  #team .software-console { grid-column: 1; grid-row: auto; }
+  #team .software-console { min-height: 520px; }
+}
+
+@media (max-width: 560px) {
+  #team .team-number-core { grid-template-columns: 92px minmax(0, 1fr); }
+  #team .team-identity strong { font-size: clamp(3rem, 16vw, 4.5rem); }
+}
+
 @media (max-width: 900px) {
   .hero {
     min-height: auto;
