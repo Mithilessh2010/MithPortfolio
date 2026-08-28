@@ -2,10 +2,6 @@ const root = document.documentElement;
 const body = document.body;
 const timeElement = document.querySelector('#local-time');
 const yearElement = document.querySelector('#year');
-const shareButton = document.querySelector('#share-button');
-const copyButton = document.querySelector('#copy-button');
-const introCopy = document.querySelector('#intro-copy');
-const toast = document.querySelector('#toast');
 const robotRail = document.querySelector('.robot-rail');
 const robot = document.querySelector('#scroll-bot');
 const robotSection = document.querySelector('#bot-section');
@@ -47,14 +43,6 @@ function updateTime() {
   }).format(new Date());
 
   timeElement.textContent = `${time} PT`;
-}
-
-function showToast(message) {
-  if (!toast) return;
-  toast.textContent = message;
-  toast.classList.add('show');
-  window.clearTimeout(showToast.timeout);
-  showToast.timeout = window.setTimeout(() => toast.classList.remove('show'), 1700);
 }
 
 function getActiveSection() {
@@ -315,31 +303,6 @@ function initProjectCards() {
     });
   });
 }
-
-shareButton?.addEventListener('click', async () => {
-  try {
-    if (navigator.share) {
-      await navigator.share({ title: document.title, url: window.location.href });
-    } else {
-      await navigator.clipboard.writeText(window.location.href);
-      showToast('link copied');
-    }
-  } catch (error) {
-    if (error?.name !== 'AbortError') showToast('could not share link');
-  }
-});
-
-copyButton?.addEventListener('click', async () => {
-  const text = introCopy?.innerText.trim();
-  if (!text) return;
-
-  try {
-    await navigator.clipboard.writeText(text);
-    showToast('introduction copied');
-  } catch {
-    showToast('could not copy text');
-  }
-});
 
 pushSections.forEach((section) => {
   section.querySelectorAll('.drop-item').forEach((item, index) => {

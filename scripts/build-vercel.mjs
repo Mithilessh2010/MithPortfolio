@@ -14,6 +14,8 @@ await Promise.all([
   copyFile(resolve(root, "project.html"), resolve(output, "project.html")),
   copyFile(resolve(root, "project.css"), resolve(output, "project.css")),
   copyFile(resolve(root, "project-page.js"), resolve(output, "project-page.js")),
+  copyFile(resolve(root, "resume.html"), resolve(output, "resume.html")),
+  copyFile(resolve(root, "resume.css"), resolve(output, "resume.css")),
   cp(resolve(root, "assets"), resolve(output, "assets"), { recursive: true }),
 ]);
 

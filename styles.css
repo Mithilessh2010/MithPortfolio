@@ -1100,28 +1100,6 @@ body.cursor-ready.cursor-visible .pointer-light {
     border-color 180ms ease,
     background 180ms ease;
 }
-.toast {
-  position: fixed;
-  left: 50%;
-  bottom: 1.5rem;
-  z-index: 500;
-  padding: 0.7rem 1rem;
-  border: 1px solid var(--ink);
-  background: var(--paper);
-  color: var(--ink);
-  font-family: "Space Mono", monospace;
-  font-size: 0.56rem;
-  opacity: 0;
-  transform: translate(-50%, 0.5rem);
-  pointer-events: none;
-  transition:
-    opacity 180ms ease,
-    transform 180ms ease;
-}
-.toast.show {
-  opacity: 1;
-  transform: translate(-50%, 0);
-}
 @media (max-width: 1180px) {
   .robot-rail {
     display: none;
