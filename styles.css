@@ -434,9 +434,10 @@ h1:hover::before {
   text-transform: uppercase;
 }
 .hero-actions {
+  position: relative;
+  top: -0.45rem;
   display: flex;
   gap: 0.4rem;
-  padding-top: 0.3rem;
 }
 .hero-actions a,
 .hero-actions button {
