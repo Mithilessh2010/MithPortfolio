@@ -170,8 +170,6 @@ function initCustomCursor() {
 
   let pointerX = window.innerWidth / 2;
   let pointerY = window.innerHeight / 2;
-  let ringX = pointerX;
-  let ringY = pointerY;
   let glowX = pointerX;
   let glowY = pointerY;
 
@@ -182,18 +180,20 @@ function initCustomCursor() {
 
     cursorRing.classList.toggle('is-invert', overLight);
     cursorDot.classList.toggle('is-invert', overLight);
+    cursorRing.classList.toggle('is-clickable', Boolean(action));
+    cursorRing.classList.toggle('is-text', reading);
     if (cursorLabel) cursorLabel.textContent = '';
     if (pointerState) pointerState.textContent = action ? 'link' : reading ? 'read' : 'track';
   };
 
   const renderCursor = () => {
-    ringX += (pointerX - ringX) * 0.18;
-    ringY += (pointerY - ringY) * 0.18;
     glowX += (pointerX - glowX) * 0.08;
     glowY += (pointerY - glowY) * 0.08;
 
-    cursorRing.style.transform = `translate3d(${ringX}px, ${ringY}px, 0) translate(-50%, -50%)`;
-    cursorDot.style.transform = `translate3d(${pointerX}px, ${pointerY}px, 0) translate(-50%, -50%)`;
+    cursorRing.style.left = `${pointerX}px`;
+    cursorRing.style.top = `${pointerY}px`;
+    cursorDot.style.left = `${pointerX}px`;
+    cursorDot.style.top = `${pointerY}px`;
     if (pointerLight) pointerLight.style.transform = `translate3d(${glowX}px, ${glowY}px, 0) translate(-50%, -50%)`;
     window.requestAnimationFrame(renderCursor);
   };

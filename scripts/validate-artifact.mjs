@@ -27,6 +27,8 @@ const response = await worker.default.fetch(new Request("https://portfolio.test/
 const html = await response.text();
 const projectResponse = await worker.default.fetch(new Request("https://portfolio.test/project.html?project=pulse"));
 const projectHtml = await projectResponse.text();
+const resumeResponse = await worker.default.fetch(new Request("https://portfolio.test/resume.html"));
+const resumeHtml = await resumeResponse.text();
 
 assert.equal(response.status, 200);
 assert.match(response.headers.get("content-type"), /text\/html/);
@@ -38,8 +40,19 @@ assert.match(html, /mithilesshb@gmail\.com/);
 assert.match(html, /data:image\/png;base64/);
 assert.match(html, /Cottonwood Creek/);
 assert.match(html, /Class of 2029/);
+assert.match(html, /Kumon Dublin Central/);
+assert.match(html, /FTC Think Award/);
+assert.match(html, /Algebra 2 Problem Solvers Showdown/);
+assert.match(html, /High School Contest Math Challenge/);
+assert.match(html, /Reading Program Completion/);
+assert.doesNotMatch(html, /class="clock"/);
+assert.doesNotMatch(html, /<a class="certificate-card/);
 assert.equal(projectResponse.status, 200);
 assert.match(projectHtml, /soon to come\./);
 assert.match(projectHtml, /project-page\.js|const projects/);
+assert.equal(resumeResponse.status, 200);
+assert.match(resumeHtml, /Save as PDF/);
+assert.match(resumeHtml, /Robo Racers 16481/);
+assert.match(resumeHtml, /Dublin Central Instructor/);
 
 console.log("Portfolio artifact is valid and serves the complete site and project page");

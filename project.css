@@ -23,6 +23,13 @@ html {
   border-radius: 50%;
   object-fit: cover;
 }
+.project-brand-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--orange);
+  box-shadow: 0 0 0 4px rgba(255, 91, 53, .12);
+}
 .project-brand em {
   color: var(--cyan);
   font-style: normal;
@@ -86,3 +93,28 @@ h1 {
     font-size: clamp(3.5rem, 18vw, 6rem);
   }
 }
+
+.project-cursor {
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  width: 25px;
+  height: 25px;
+  border: 1.5px solid var(--cyan);
+  border-radius: 7px;
+  background: rgba(8, 10, 11, .18);
+  translate: -50% -50%;
+  rotate: 45deg;
+  opacity: 0;
+  pointer-events: none;
+  transition: width 180ms cubic-bezier(.22, 1, .36, 1), height 180ms cubic-bezier(.22, 1, .36, 1), border-radius 180ms ease, opacity 120ms ease, rotate 180ms ease;
+}
+.project-cursor::after { content: ""; position: absolute; inset: 7px; border-radius: 50%; background: var(--orange); }
+.project-cursor.is-visible { opacity: 1; }
+.project-cursor.is-clickable { width: 35px; height: 35px; border-radius: 50%; rotate: 90deg; }
+.project-cursor.is-text { width: 12px; height: 30px; border-radius: 5px; rotate: 0deg; }
+.project-cursor.is-down { width: 18px; height: 18px; rotate: 135deg; }
+.has-custom-cursor,
+.has-custom-cursor a,
+.has-custom-cursor button { cursor: none; }

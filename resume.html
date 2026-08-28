@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Resume for student software developer Mithilessh Bhasker." />
+    <title>Mithilessh Bhasker — Resume</title>
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="resume.css" />
+  </head>
+  <body>
+    <div class="resume-cursor" aria-hidden="true"></div>
+    <nav class="resume-nav" aria-label="Resume controls">
+      <a href="index.html">← Back to portfolio</a>
+      <button type="button" onclick="window.print()">Save as PDF</button>
+    </nav>
+
+    <main class="resume-sheet">
+      <header class="resume-header">
+        <div class="resume-identity">
+          <img class="resume-photo" src="assets/profile.png" alt="Mithilessh Bhasker" />
+          <div>
+          <p class="overline">Student software developer</p>
+          <h1>Mithilessh<br />Bhasker</h1>
+          </div>
+        </div>
+        <div class="contact-list">
+          <a href="mailto:mithilesshb@gmail.com">mithilesshb@gmail.com</a>
+          <a href="https://github.com/Mithilessh2010">github.com/Mithilessh2010</a>
+          <span>Pleasanton, California</span>
+          <span>Class of 2029</span>
+          <a href="index.html">Portfolio ↗</a>
+        </div>
+      </header>
+
+      <div class="resume-focus" aria-label="Professional focus">
+        <span>Robotics software</span><i></i><span>Autonomous systems</span><i></i><span>Product development</span>
+      </div>
+
+      <div class="resume-grid">
+        <section class="resume-main">
+          <article>
+            <h2>Profile</h2>
+            <p>I’m a student developer focused on robotics software, autonomous movement, and useful web products. I like taking ideas from an early prototype to something dependable enough for a real team to use.</p>
+          </article>
+
+          <article>
+            <h2>Experience</h2>
+            <div class="entry entry-featured">
+              <span class="entry-index">01</span>
+              <div class="entry-heading"><h3>Software Team · Robo Racers 16481</h3><span>FTC Robotics</span></div>
+              <p>Build and test FTC Java robot software, autonomous paths, telemetry, and field-ready movement with the team.</p>
+            </div>
+            <div class="entry">
+              <span class="entry-index">02</span>
+              <div class="entry-heading"><h3>Beta Tester · Pedro Pathing</h3><span>Robotics software</span></div>
+              <p>Test autonomous pathing behavior and provide feedback from hands-on FTC robot development.</p>
+            </div>
+            <div class="entry">
+              <span class="entry-index">03</span>
+              <div class="entry-heading"><h3><img class="entry-logo" src="https://au.kumonglobal.com/wp-content/uploads/2023/03/kumon-logo_L_transparent-for-website.png" alt="Kumon" /><span class="visually-hidden">Kumon</span> Dublin Central Instructor</h3><span>2 years</span></div>
+              <p>Supported students in math and reading, checked assignments, explained corrections, and helped learners build accuracy and confidence.</p>
+            </div>
+          </article>
+
+          <article>
+            <h2>Selected projects</h2>
+            <div class="project-entry"><span>01</span><div><div class="entry-heading"><h3>Streaming Hackpad</h3><span>2026</span></div><p>Custom RP2040 PCB with mechanical keys, rotary input, addressable LEDs, an OLED, and a three-part printed enclosure.</p></div></div>
+            <div class="project-entry"><span>02</span><div><div class="entry-heading"><h3>Wireless Split Keyboard</h3><span>2026</span></div><p>60-key ergonomic keyboard designed in Fusion 360 and KiCad with CircuitPython and KMK firmware.</p></div></div>
+            <div class="project-entry"><span>03</span><div><div class="entry-heading"><h3>Pulse</h3><span>2026</span></div><p>Team command center for tasks, approvals, expenses, updates, meetings, and follow-ups.</p></div></div>
+          </article>
+        </section>
+
+        <aside>
+          <article>
+            <h2>Education</h2>
+            <h3>Amador Valley High School</h3>
+            <p>Pleasanton, California<br />Class of 2029</p>
+          </article>
+          <article>
+            <h2>Skills</h2>
+            <ul class="skill-list"><li>Java</li><li>TypeScript</li><li>JavaScript</li><li>Python</li><li>React</li><li>Next.js</li><li>FTC robotics</li><li>Pedro Pathing</li><li>KiCad</li><li>Fusion 360</li></ul>
+          </article>
+          <article>
+            <h2>Coursework</h2>
+            <p><strong>Harvard CS50x</strong><br />Introduction to Computer Science</p>
+            <p><strong>IBM SkillsBuild</strong><br />Cybersecurity Fundamentals</p>
+            <p><strong>NASA ARSET</strong><br />Fundamentals of Remote Sensing</p>
+          </article>
+          <article>
+            <h2>Highlights</h2>
+            <p><strong>FTC Think Award</strong><br />Robo Racers 16481 · 2025</p>
+            <p><strong>1st Place · Algebra 2</strong><br />AoPS Academy · 2024–25</p>
+            <p><strong>1st Place · Contest Math</strong><br />AoPS Academy · 2025–26</p>
+            <p><strong>Kumon Reading Program</strong><br />Completed July 2023</p>
+          </article>
+        </aside>
+      </div>
+    </main>
+    <script>
+      const cursor = document.querySelector('.resume-cursor');
+      if (matchMedia('(hover: hover) and (pointer: fine)').matches) {
+        document.body.classList.add('has-cursor');
+        addEventListener('pointermove', (event) => {
+          cursor.style.left = `${event.clientX}px`;
+          cursor.style.top = `${event.clientY}px`;
+          cursor.classList.toggle('over-link', Boolean(event.target.closest('a, button')));
+          cursor.classList.add('visible');
+        }, { passive: true });
+        addEventListener('pointerdown', () => cursor.classList.add('down'));
+        addEventListener('pointerup', () => cursor.classList.remove('down'));
+      }
+    </script>
+  </body>
+</html>

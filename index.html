@@ -25,29 +25,21 @@
     <a class="skip-link" href="#about">skip to content</a>
 
     <div class="pointer-light" aria-hidden="true"></div>
-    <div class="cursor-ring" aria-hidden="true">
-      <i></i><i></i><i></i><i></i>
-      <span id="cursor-label"></span>
-    </div>
+    <div class="cursor-ring" aria-hidden="true"></div>
     <div class="cursor-dot" aria-hidden="true"></div>
     <div class="ambient-grid" aria-hidden="true"><span></span><span></span></div>
 
     <header class="site-nav">
-      <a class="mini-mark" href="#about" aria-label="Back to the beginning" data-cursor="HOME"><img src="assets/profile.png" alt="" /><b>MB<span>/26</span></b></a>
+      <a class="mini-mark" href="#about" aria-label="Back to the beginning" data-cursor="HOME"><img src="assets/profile.png" alt="Mithilessh Bhasker" /><b>Mithilessh</b></a>
       <nav class="nav-links" aria-label="Main navigation">
         <a href="#about" data-cursor="JUMP">about</a>
-        <a href="#team" data-cursor="JUMP">team</a>
-        <a href="#projects" data-cursor="JUMP">projects</a>
+        <a href="#team" data-cursor="JUMP">robotics</a>
+        <a href="#projects" data-cursor="JUMP">work</a>
         <a href="#skills" data-cursor="JUMP">skills</a>
-        <a href="#education" data-cursor="JUMP">education</a>
-        <a href="#certifications" data-cursor="JUMP">certs</a>
-        <a href="#achievements" data-cursor="JUMP">achievements</a>
+        <a href="#certifications" data-cursor="JUMP">awards</a>
+        <a href="resume.html" data-cursor="OPEN">resume</a>
         <a href="#contact" data-cursor="JUMP">contact</a>
       </nav>
-      <div class="clock" title="Local time in California">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg>
-        <span id="local-time">--:-- PT</span>
-      </div>
     </header>
 
     <main class="page-wrap">
@@ -70,7 +62,7 @@
           <div class="hero-text hero-load hero-load-two">
             <div class="hero-heading">
               <div>
-                <p class="eyebrow"><span></span>student builder</p>
+                <p class="eyebrow"><span></span>software, robots, and things I wanted to exist</p>
                 <h1 aria-label="Mithilessh" data-scramble data-cursor="THAT'S ME">Mithilessh<span class="name-cursor">_</span></h1>
                 <p class="hero-surname">Bhasker</p>
               </div>
@@ -97,23 +89,23 @@
             <div id="intro-copy" class="hero-paragraphs">
               <p>
                 <span class="line-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z"></path><circle cx="12" cy="10" r="2.5"></circle></svg></span>
-                <span>student software builder on Robo Racers 16481.</span>
+                <span>I’m a student developer on Robo Racers 16481.</span>
               </p>
               <p>
                 <span class="line-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m5 7 5 5-5 5M12 17h7"></path></svg></span>
-                <span>Pedro Pathing beta tester working on autonomous paths, FTC Java, and robot software.</span>
+                <span>I test Pedro Pathing and write FTC Java for autonomous runs.</span>
               </p>
               <p>
                 <span class="line-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="5" cy="6" r="2"></circle><circle cx="19" cy="18" r="2"></circle><path d="M5 8v10a2 2 0 0 0 2 2h5M19 16V8a2 2 0 0 0-2-2h-5M9 3l3 3-3 3"></path></svg></span>
-                <span>I learn best by making a first version, finding everything wrong with it, and building the next one better.</span>
+                <span>Most of what I know came from building a rough first version, then making it better.</span>
               </p>
               <p>
                 <span class="line-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9 18h6M10 22h4M8.5 14.5a7 7 0 1 1 7 0c-.9.7-1.5 1.5-1.5 2.5h-4c0-1-.6-1.8-1.5-2.5Z"></path></svg></span>
-                <span>also building web apps with TypeScript, JavaScript, React, and Next.js.</span>
+                <span>Outside robotics, I make web apps with TypeScript, React, and Next.js.</span>
               </p>
               <p>
                 <span class="line-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 5h16v14H4zM4 7l8 6 8-6"></path></svg></span>
-                <span>the projects probably explain me better than a long bio ever could.</span>
+                <span>Take a look around. The projects tell the story better than a long bio.</span>
               </p>
             </div>
 
@@ -126,7 +118,10 @@
               <span><img src="assets/logos/github.svg" alt="" />GitHub</span>
             </div>
 
-            <a class="scroll-invite" href="#team" data-cursor="GO"><span>keep going — it knows what to do</span><i aria-hidden="true">↓</i></a>
+            <div class="hero-cta-row">
+              <a class="scroll-invite" href="#team" data-cursor="GO"><span>See what I’ve been building</span><i aria-hidden="true">↓</i></a>
+              <a class="resume-link" href="resume.html" data-cursor="OPEN">View resume <span>↗</span></a>
+            </div>
           </div>
         </div>
       </section>
@@ -141,10 +136,20 @@
 
           <div class="team-stage">
             <div class="team-number drop-item" data-tilt>
-              <img class="team-logo" src="assets/logos/robo-racers.png" alt="Robo Racers 16481 logo" />
-              <span>SOFTWARE TEAM</span>
-              <strong>16481</strong>
-              <small>Robo Racers</small>
+              <div class="team-number-core">
+                <img class="team-logo" src="assets/logos/robo-racers.png" alt="Robo Racers 16481 logo" />
+                <div class="team-identity">
+                  <span>SOFTWARE TEAM</span>
+                  <strong>16481</strong>
+                  <small>Robo Racers · FIRST Tech Challenge</small>
+                </div>
+              </div>
+              <div class="team-system-grid" aria-label="Robotics software focus">
+                <div><span>01</span><b>Autonomous</b><small>Path planning and tuning</small></div>
+                <div><span>02</span><b>Robot control</b><small>FTC Java systems</small></div>
+                <div><span>03</span><b>Field feedback</b><small>Telemetry and debugging</small></div>
+              </div>
+              <div class="team-live-line"><i></i><span>BUILDING FOR COMPETITION</span><b>PEDRO PATHING · FTC SDK</b></div>
             </div>
             <div class="team-copy drop-item">
               <p class="team-kicker">MY ROBOTICS TEAM</p>
@@ -270,7 +275,7 @@
         <div class="section-shell">
           <header class="section-heading">
             <div><h2>software stack</h2><p>languages and tools verified from my projects and robotics work.</p></div>
-            <span class="section-code">STACK.JSON</span>
+            <span class="section-code">What I use</span>
           </header>
           <div class="software-skill-grid">
             <article class="software-skill-lane drop-item">
@@ -315,7 +320,7 @@
         <div class="section-shell">
           <header class="section-heading">
             <div><h2>education</h2><p>My school path from Dublin to Pleasanton.</p></div>
-            <span class="section-code">LEARN.MD</span>
+            <span class="section-code">Where I learn</span>
           </header>
           <div class="education-timeline">
             <article class="education-card drop-item">
@@ -331,6 +336,14 @@
               <b>Class of 2029</b>
             </article>
           </div>
+          <article class="experience-card drop-item">
+            <div class="experience-mark"><img src="https://au.kumonglobal.com/wp-content/uploads/2023/03/kumon-logo_L_transparent-for-website.png" alt="Kumon" /></div>
+            <div>
+              <span>WORK EXPERIENCE · 2 YEARS</span>
+              <h3>Instructor · Kumon Dublin Central</h3>
+              <p>Supported students with math and reading work, checked assignments, explained corrections, and helped learners build accuracy and confidence.</p>
+            </div>
+          </article>
         </div>
       </section>
 
@@ -338,26 +351,45 @@
         <div class="section-cap"><span>06 / verified learning</span><i></i></div>
         <div class="section-shell wide-shell">
           <header class="section-heading">
-            <div><h2>certifications</h2><p>courses finished, skills tested, proof attached.</p></div>
-            <span class="section-code">CREDENTIALS/</span>
+            <div><h2>certificates & awards</h2><p>courses completed, competitions won, and the proof behind each one.</p></div>
+            <span class="section-code">Credentials</span>
           </header>
           <div class="certificate-grid">
-            <a class="certificate-card drop-item" href="https://cs50.harvard.edu/certificates/66d4f245-7c02-4ed2-a7fc-5e9ecb67f37d" target="_blank" rel="noreferrer" data-cursor="CS50X" data-tilt>
+            <article class="certificate-card drop-item" data-tilt>
               <div class="certificate-image"><img src="assets/certifications/cs50x.png" alt="Harvard CS50x certificate awarded to Mithilessh Saai Bhasker" /></div>
               <div class="certificate-copy"><span>01 · HARVARD</span><h3>CS50x: Introduction to Computer Science</h3><p>Completed ten problem sets and a final project · 2026</p></div>
-            </a>
-            <a class="certificate-card drop-item" href="https://www.credly.com/badges/c995c6e0-8923-47e7-a2d6-a442b310cc51" target="_blank" rel="noreferrer" data-cursor="IBM" data-tilt>
+            </article>
+            <article class="certificate-card drop-item" data-tilt>
               <div class="certificate-image"><img src="assets/certifications/ibm-cybersecurity.png" alt="IBM Cybersecurity Fundamentals credential awarded to Mithilessh Bhasker" /></div>
               <div class="certificate-copy"><span>02 · IBM SKILLSBUILD</span><h3>Cybersecurity Fundamentals</h3><p>Issued July 22, 2026</p></div>
-            </a>
-            <a class="certificate-card drop-item" href="assets/certifications/nasa-remote-sensing.png" target="_blank" data-cursor="NASA" data-tilt>
+            </article>
+            <article class="certificate-card drop-item" data-tilt>
               <div class="certificate-image"><img src="assets/certifications/nasa-remote-sensing.png" alt="NASA ARSET Fundamentals of Remote Sensing certificate awarded to Mithilessh Bhasker" /></div>
               <div class="certificate-copy"><span>03 · NASA ARSET</span><h3>Fundamentals of Remote Sensing</h3><p>Completed August 4, 2026</p></div>
-            </a>
-            <a class="certificate-card drop-item" href="https://stardance.space/certificate/U9W5F9" target="_blank" rel="noreferrer" data-cursor="HACK CLUB" data-tilt>
+            </article>
+            <article class="certificate-card drop-item" data-tilt>
               <div class="certificate-image"><img src="assets/certifications/hack-club-stardance.png" alt="Hack Club Stardance certificate awarded to Mithilessh Saai Bhasker" /></div>
               <div class="certificate-copy"><span>04 · HACK CLUB</span><h3>Stardance Challenge</h3><p>Built and shipped one project · 38 hours of work</p></div>
-            </a>
+            </article>
+          </div>
+          <div class="awards-heading"><span>COMPETITION + ACADEMIC AWARDS</span><i></i></div>
+          <div class="award-gallery" aria-label="Awards and academic distinctions">
+            <article class="award-card drop-item">
+              <div class="award-image award-image-portrait"><img src="assets/awards/ftc-think-award.png" alt="FTC Think Award certificate for Mithilessh Bhasker as a member of Robo Racers 16481" /></div>
+              <div class="award-copy"><span>01 · FEBRUARY 2, 2025</span><h3>FTC Think Award</h3><b>NorCal East Bay League Tournament</b><p>Recognized as a member of Robo Racers FTC Team 16481 when the team earned the Think Award.</p></div>
+            </article>
+            <article class="award-card drop-item">
+              <div class="award-image"><img src="assets/awards/aops-algebra-2.png" alt="AoPS Academy Algebra 2 Problem Solvers Showdown first place certificate" /></div>
+              <div class="award-copy"><span>02 · 2024–25</span><h3>1st Place</h3><b>Algebra 2 Problem Solvers Showdown</b><p>Placed first in AoPS Academy’s Algebra 2 competition, demonstrating strong mathematical reasoning and problem-solving skills.</p></div>
+            </article>
+            <article class="award-card drop-item">
+              <div class="award-image"><img src="assets/awards/aops-contest-math.png" alt="AoPS Academy High School Contest Math Problem Solvers Challenge first place certificate" /></div>
+              <div class="award-copy"><span>03 · 2025–26</span><h3>1st Place</h3><b>High School Contest Math Challenge</b><p>Placed first in AoPS Academy’s High School Contest Math Problem Solvers Challenge.</p></div>
+            </article>
+            <article class="award-card drop-item">
+              <div class="award-image"><img src="assets/awards/kumon-reading.png" alt="Kumon Reading Program completion diploma awarded to Mithilessh Bhasker" /></div>
+              <div class="award-copy"><span>04 · JULY 2023</span><h3>Reading Program Completion</h3><b>Kumon Dublin Central</b><p>Completed the Kumon Reading Program and earned academic distinction through Kumon Dublin Central.</p></div>
+            </article>
           </div>
         </div>
       </section>
@@ -367,7 +399,7 @@
         <div class="section-shell">
           <header class="section-heading">
             <div><h2>achievements</h2><p>competition wins and software roles.</p></div>
-            <span class="section-code">PROGRESS.LOG</span>
+            <span class="section-code">Highlights</span>
           </header>
           <div class="achievement-grid achievement-grid-logo">
             <article class="drop-item"><span>01</span><img src="assets/logos/stang-hacks.webp" alt="Stang Hacks logo" /><small>STANG HACKS</small><h3>AirPods winner</h3><p>Hackathon award winner.</p></article>

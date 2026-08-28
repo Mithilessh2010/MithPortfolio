@@ -4,13 +4,15 @@ import { resolve } from "node:path";
 const root = resolve(import.meta.dirname, "..");
 const dist = resolve(root, "dist");
 
-const [html, css, javascript, projectHtml, projectCss, projectJavascript] = await Promise.all([
+const [html, css, javascript, projectHtml, projectCss, projectJavascript, resumeHtml, resumeCss] = await Promise.all([
   readFile(resolve(root, "index.html"), "utf8"),
   readFile(resolve(root, "styles.css"), "utf8"),
   readFile(resolve(root, "script.js"), "utf8"),
   readFile(resolve(root, "project.html"), "utf8"),
   readFile(resolve(root, "project.css"), "utf8"),
   readFile(resolve(root, "project-page.js"), "utf8"),
+  readFile(resolve(root, "resume.html"), "utf8"),
+  readFile(resolve(root, "resume.css"), "utf8"),
 ]);
 
 let page = html
@@ -20,6 +22,8 @@ let page = html
 let projectPage = projectHtml
   .replace('<link rel="stylesheet" href="project.css" />', `<style>${projectCss}</style>`)
   .replace('<script src="project-page.js" defer></script>', `<script type="module">${projectJavascript}</script>`);
+
+let resumePage = resumeHtml.replace('<link rel="stylesheet" href="resume.css" />', `<style>${resumeCss}</style>`);
 
 const localImages = [
   "assets/favicon.svg",
@@ -51,6 +55,10 @@ const localImages = [
   "assets/logos/vite.svg",
   "assets/logos/supabase.svg",
   "assets/logos/robo-racers.png",
+  "assets/awards/ftc-think-award.png",
+  "assets/awards/aops-algebra-2.png",
+  "assets/awards/aops-contest-math.png",
+  "assets/awards/kumon-reading.png",
 ];
 
 const imageMime = (imagePath) => {
@@ -65,10 +73,12 @@ for (const imagePath of localImages) {
   const dataUrl = `data:${imageMime(imagePath)};base64,${image.toString("base64")}`;
   page = page.replaceAll(imagePath, dataUrl);
   projectPage = projectPage.replaceAll(imagePath, dataUrl);
+  resumePage = resumePage.replaceAll(imagePath, dataUrl);
 }
 
 const worker = `const page = ${JSON.stringify(page)};
 const projectPage = ${JSON.stringify(projectPage)};
+const resumePage = ${JSON.stringify(resumePage)};
 
 export default {
   async fetch(request) {
@@ -79,6 +89,8 @@ export default {
       responsePage = page;
     } else if (url.pathname === "/project" || url.pathname === "/project.html") {
       responsePage = projectPage;
+    } else if (url.pathname === "/resume" || url.pathname === "/resume.html") {
+      responsePage = resumePage;
     } else {
       return new Response("Not found", { status: 404 });
     }
