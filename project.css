@@ -79,6 +79,20 @@ h1 {
   line-height: 0.8;
   letter-spacing: -0.07em;
 }
+.project-source {
+  width: fit-content;
+  display: inline-flex;
+  margin-top: 2rem;
+  padding: .8rem 1rem;
+  border: 1px solid var(--cyan);
+  border-radius: 999px;
+  color: var(--cyan);
+  font-size: .8rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+.project-source:hover { background: var(--cyan); color: var(--ink); }
+.project-source[hidden] { display: none; }
 @media (max-width: 560px) {
   .project-nav {
     align-items: flex-start;

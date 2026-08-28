@@ -3904,6 +3904,30 @@ footer a {
   .team-number { padding: .85rem !important; }
 }
 
+.project-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: .65rem;
+}
+.project-source-link {
+  display: inline-flex;
+  align-items: center;
+  gap: .4rem;
+  padding: .68rem .82rem;
+  border: 1px solid rgba(255, 255, 255, .18);
+  color: #d6dcdd;
+  font-size: .7rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: border-color 180ms ease, color 180ms ease, background 180ms ease;
+}
+.project-source-link:hover {
+  border-color: var(--cyan);
+  background: rgba(112, 228, 255, .07);
+  color: var(--cyan);
+}
+
 @media (max-width: 900px) {
   .hero {
     min-height: auto;
