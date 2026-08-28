@@ -3709,6 +3709,12 @@ h1 {
   align-self: center;
   width: 100%;
   padding: 1.5rem 0;
+  overflow: hidden;
+}
+#team .team-copy h3 {
+  max-width: 100%;
+  font-size: clamp(2.8rem, 4.8vw, 4.4rem);
+  overflow-wrap: normal;
 }
 #team .software-console {
   grid-column: 2;
@@ -3725,11 +3731,13 @@ h1 {
   overflow: hidden;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1300px) {
   #team .team-stage { grid-template-columns: 1fr; grid-template-rows: auto; padding: clamp(1rem, 4vw, 2rem); }
   #team .team-number,
   #team .team-copy,
   #team .software-console { grid-column: 1; grid-row: auto; }
+  #team .team-copy { max-width: 680px; padding-bottom: .5rem; }
+  #team .team-copy h3 { font-size: clamp(3.2rem, 8vw, 5.2rem); }
   #team .software-console { min-height: 520px; }
 }
 
