@@ -1901,6 +1901,26 @@ h1 {
   }
 }
 
+@media (min-width: 901px) and (max-width: 1180px) {
+  .hero {
+    min-height: auto;
+    padding: 8rem clamp(1.4rem, 4vw, 3rem) 5rem;
+  }
+  .hero::before,
+  .hero::after,
+  .avatar-wrap { display: none; }
+  .hero-inner { display: block; width: 100%; }
+  .hero-text,
+  .hero-paragraphs,
+  .hero-logo-rail { width: 100%; max-width: 760px; }
+  .hero-heading,
+  .hero-paragraphs p,
+  .scroll-invite { translate: none !important; scale: 1 !important; opacity: 1 !important; }
+  .hero-paragraphs p:nth-child(even),
+  .hero-paragraphs p:nth-child(odd) { translate: none !important; }
+  .hero-logo-rail { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+
 /* Keep the cursor override last so older experimental cursor rules cannot win. */
 .cursor-ring,
 .cursor-ring.is-invert,
@@ -3744,6 +3764,144 @@ h1 {
 @media (max-width: 560px) {
   #team .team-number-core { grid-template-columns: 92px minmax(0, 1fr); }
   #team .team-identity strong { font-size: clamp(3rem, 16vw, 4.5rem); }
+}
+
+/* Layout safety: content must adapt to its container at every viewport width. */
+.site-nav,
+.page-wrap,
+.section-shell,
+.hero-inner,
+.team-stage,
+.team-number,
+.team-number-core,
+.team-identity,
+.team-copy,
+.team-system-grid,
+.software-console,
+.console-main,
+.code-window,
+.path-window,
+.telemetry-strip,
+.team-software-badges,
+.certificate-grid,
+.award-gallery,
+.award-card,
+.achievement-grid,
+.contact-row,
+.social-row,
+footer {
+  min-width: 0;
+  max-width: 100%;
+}
+
+.team-copy { container-type: inline-size; }
+#team .team-copy h3 {
+  width: 100%;
+  max-width: 100%;
+  font-size: clamp(2.25rem, 18cqi, 4.4rem);
+  overflow-wrap: anywhere;
+  word-break: normal;
+}
+
+.team-copy p,
+.team-tags span,
+.team-links a,
+.team-identity small,
+.team-system-grid b,
+.team-system-grid small,
+.team-live-line span,
+.team-live-line b,
+.console-top span,
+.console-top b,
+.telemetry-strip span,
+.team-software-badges span,
+.section-heading h2,
+.section-heading p,
+.certificate-copy h3,
+.certificate-copy p,
+.award-copy h3,
+.award-copy b,
+.award-copy p,
+.achievement-grid h3,
+.achievement-grid p,
+.contact-row a,
+.contact-row span,
+footer span,
+footer a {
+  min-width: 0;
+  max-width: 100%;
+  overflow-wrap: anywhere;
+}
+
+.team-logo,
+.team-number img,
+.certificate-image img,
+.award-image img {
+  max-width: 100%;
+}
+
+@media (max-width: 760px) {
+  #team .console-main {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  #team .code-window {
+    min-height: 260px;
+    border-right: 0;
+    border-bottom: 1px solid #394246;
+  }
+  #team .path-window { min-height: 340px; }
+  #team .code-window code {
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+  }
+  #team .telemetry-strip,
+  #team .team-software-badges {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  #team .telemetry-strip span,
+  #team .team-software-badges a {
+    border-right: 0;
+    border-bottom: 1px solid #394246;
+  }
+  #team .telemetry-strip span:last-child,
+  #team .team-software-badges a:last-child { border-bottom: 0; }
+  .achievement-grid,
+  .certificate-grid,
+  .contact-row,
+  footer { grid-template-columns: minmax(0, 1fr); }
+  footer { gap: .75rem; }
+}
+
+@media (max-width: 440px) {
+  #team .team-number-core {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  #team .team-number .team-logo {
+    width: min(150px, 100%);
+  }
+  #team .team-identity strong {
+    font-size: clamp(2.8rem, 20vw, 4.2rem);
+    overflow-wrap: anywhere;
+  }
+  #team .console-top {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: .35rem;
+    padding-block: .7rem;
+  }
+  .hero-actions { flex-wrap: wrap; }
+  .section-heading { align-items: flex-start; }
+  .section-code { max-width: 42%; text-align: right; overflow-wrap: anywhere; }
+}
+
+@media (max-width: 320px) {
+  .hero,
+  .push-section { padding-inline: .8rem; }
+  .site-nav { padding-inline: .75rem; }
+  .mini-mark b { display: none !important; }
+  .hero-logo-rail { width: calc(100vw - 1.6rem) !important; max-width: calc(100vw - 1.6rem) !important; grid-template-columns: minmax(0, 1fr) !important; }
+  .team-stage { padding: .7rem !important; }
+  .team-number { padding: .85rem !important; }
 }
 
 @media (max-width: 900px) {
