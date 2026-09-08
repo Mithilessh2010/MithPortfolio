@@ -131,6 +131,7 @@ aside p { font-size: .88rem; }
 .credential-card p { margin-top: .2rem; font-size: .72rem; line-height: 1.35; }
 .credential-featured { grid-column: 1 / -1; grid-template-columns: 150px minmax(0, 1fr); border-color: rgba(49, 87, 255, .32); background: rgba(49, 87, 255, .055); }
 .credential-featured img { width: 150px; height: 96px; }
+.kumon-finished { color: var(--blue); font-weight: 800; letter-spacing: .035em; }
 aside article {
   padding: 1rem;
   border: 1px solid rgba(16, 19, 20, .12);
