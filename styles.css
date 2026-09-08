@@ -3411,7 +3411,13 @@ h1 {
     grid-template-columns: 1fr;
   }
   .education-card {
-    min-height: 270px;
+    min-height: 300px;
+    padding-top: 6rem;
+  }
+  .education-card h3 {
+    max-width: 13ch;
+    font-size: clamp(2.25rem, 12vw, 3.7rem);
+    line-height: .92;
   }
 }
 
