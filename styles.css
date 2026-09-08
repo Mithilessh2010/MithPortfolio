@@ -3521,11 +3521,6 @@ h1 {
   border-radius: 14px;
   background: rgba(255, 255, 255, .45);
 }
-.kumon-finished {
-  color: var(--blue);
-  font-weight: 800;
-  letter-spacing: .035em;
-}
 .experience-mark {
   width: 150px;
   min-height: 64px;
