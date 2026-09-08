@@ -40,7 +40,7 @@ assert.match(html, /mithilesshb@gmail\.com/);
 assert.match(html, /data:image\/png;base64/);
 assert.match(html, /Cottonwood Creek/);
 assert.match(html, /Class of 2029/);
-assert.match(html, /Kumon Dublin Central/);
+assert.match(html, /Kumon Instructor/);
 assert.match(html, /FTC Think Award/);
 assert.match(html, /Algebra 2 Problem Solvers Showdown/);
 assert.match(html, /High School Contest Math Challenge/);
@@ -57,6 +57,6 @@ assert.match(projectHtml, /project-page\.js|const projects/);
 assert.equal(resumeResponse.status, 200);
 assert.match(resumeHtml, /Save as PDF/);
 assert.match(resumeHtml, /Robo Racers 16481/);
-assert.match(resumeHtml, /Dublin Central Instructor/);
+assert.match(resumeHtml, /Kumon Instructor/);
 
 console.log("Portfolio artifact is valid and serves the complete site and project page");
