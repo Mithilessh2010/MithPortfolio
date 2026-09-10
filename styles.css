@@ -3775,6 +3775,55 @@ h1 {
   width: 100%;
   max-width: 100%;
 }
+.pedro-proof {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: minmax(260px, .72fr) minmax(0, 1.28fr);
+  gap: clamp(1.5rem, 4vw, 4rem);
+  margin-top: clamp(1.25rem, 3vw, 2.5rem);
+  padding: clamp(1.4rem, 3vw, 2.5rem);
+  border: 1px solid #596467;
+  background: linear-gradient(125deg, rgba(86, 232, 255, .08), transparent 38%), #0d1112;
+}
+.pedro-proof-intro h3 {
+  margin: 0 0 1rem;
+  color: #f0f3f2;
+  font-size: clamp(2rem, 4vw, 3.8rem);
+  line-height: .92;
+  letter-spacing: -.055em;
+}
+.pedro-proof-intro > p:not(.team-kicker) { margin: 0; color: #a2aaac; }
+.pedro-proof-intro > a {
+  display: inline-flex;
+  gap: .7rem;
+  margin-top: 1.35rem;
+  padding-bottom: .25rem;
+  border-bottom: 1px solid var(--orange);
+  color: var(--orange);
+  font-family: "Space Mono", monospace;
+  font-size: .58rem;
+  font-weight: 700;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+}
+.pedro-proof-stats { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border: 1px solid #394246; }
+.pedro-proof-stats a {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  padding: clamp(1rem, 2vw, 1.5rem);
+  border-right: 1px solid #394246;
+  color: inherit;
+  text-decoration: none;
+  transition: background 180ms ease, border-color 180ms ease;
+}
+.pedro-proof-stats a:last-child { border-right: 0; }
+.pedro-proof-stats a:hover { background: rgba(86, 232, 255, .07); }
+.pedro-proof-stats span { color: var(--cyan); font: 700 clamp(2rem, 4vw, 3.5rem)/1 "Space Mono", monospace; letter-spacing: -.08em; }
+.pedro-proof-stats b { margin: .85rem 0 .5rem; color: #f0f3f2; font-size: .78rem; }
+.pedro-proof-stats small { color: #8f999b; font-size: .64rem; line-height: 1.5; }
 #team .team-number-core {
   grid-template-columns: minmax(150px, 210px) minmax(0, 1fr);
 }
@@ -3792,6 +3841,16 @@ h1 {
   #team .team-copy { max-width: 680px; padding-bottom: .5rem; }
   #team .team-copy h3 { font-size: clamp(3.2rem, 8vw, 5.2rem); }
   #team .software-console { min-height: 520px; }
+}
+
+@media (max-width: 900px) {
+  .pedro-proof { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 620px) {
+  .pedro-proof-stats { grid-template-columns: 1fr; }
+  .pedro-proof-stats a { border-right: 0; border-bottom: 1px solid #394246; }
+  .pedro-proof-stats a:last-child { border-bottom: 0; }
 }
 
 @media (max-width: 560px) {
