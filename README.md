@@ -1,21 +1,34 @@
-# Mithilessh Portfolio
+# Mithilessh Bhasker Portfolio — V20 Pedro Pathing Story
 
-This is the personal portfolio website for Mithilessh Saai Bhasker. It brings together his robotics work, projects, skills, education, certifications, achievements, and ways to get in touch.
+This pass makes the Pedro Pathing story feel like a major part of the portfolio instead of a small contribution list.
 
-The site is built with plain HTML, CSS, and JavaScript, with responsive layouts and a few interactive details throughout the page.
+Highlights:
+- homepage Pedro section now leads with the project’s official FTC positioning and visual proof
+- adds a robot + autonomous path hero visual using the real Robo Racers robot and Pedro logo
+- shows 12 merged PRs, 4 Quickstart merges, 8 Docs merges, and Sep 2026 GitHub community stats
+- dedicated Pedro page now explains why the library matters in competition, not just what PRs were merged
+- adds Visualizer / docs + white paper / open-source ecosystem links
+- adds a featured Quickstart #100 contribution and keeps all 12 PR links
+- preserves the V19 custom white dot + halo cursor with native cursor hidden
+- preserves the smoother cached hero background and V18 robotics awards
+- Vercel/static build and reduced-motion support remain intact
 
 ## Run locally
 
-From this folder, start a simple local server:
-
 ```bash
-python3 -m http.server 8000
+npm run build:vercel
+python3 -m http.server 8080 -d public
 ```
 
-Then open `http://localhost:8000`.
+## Validate
 
-## Deploy with Vercel
+```bash
+npm run build
+npm run validate
+npm run build:vercel
+```
 
-Import this repository into Vercel and deploy it. The checked-in `vercel.json` runs
-the static-site build, publishes the generated `public` directory, and keeps the
-project detail page available at `/project`.
+V22: Restores the original mithib.com left-to-right name decrypt effect, now triggered once on load and again on hover.
+
+
+V23: OG cryptic decrypt now runs automatically on page load for both Mithilessh and Bhasker, with hover replay.

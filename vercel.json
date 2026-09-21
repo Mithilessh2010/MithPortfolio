@@ -3,28 +3,19 @@
   "buildCommand": "npm run build:vercel",
   "outputDirectory": "public",
   "rewrites": [
-    {
-      "source": "/project",
-      "destination": "/project.html"
-    },
-    {
-      "source": "/resume",
-      "destination": "/resume.html"
-    }
+    {"source":"/robotics","destination":"/robotics.html"},
+    {"source":"/pedro","destination":"/pedro.html"},
+    {"source":"/equal-horizons","destination":"/equal-horizons.html"},
+    {"source":"/projects","destination":"/projects.html"},
+    {"source":"/recognition","destination":"/recognition.html"},
+    {"source":"/about","destination":"/about.html"},
+    {"source":"/project","destination":"/project.html"},
+    {"source":"/resume","destination":"/resume.html"}
   ],
   "headers": [
-    {
-      "source": "/(.*)",
-      "headers": [
-        {
-          "key": "X-Content-Type-Options",
-          "value": "nosniff"
-        },
-        {
-          "key": "Referrer-Policy",
-          "value": "strict-origin-when-cross-origin"
-        }
-      ]
-    }
+    {"source":"/(.*)","headers":[
+      {"key":"X-Content-Type-Options","value":"nosniff"},
+      {"key":"Referrer-Policy","value":"strict-origin-when-cross-origin"}
+    ]}
   ]
 }

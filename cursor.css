@@ -1,0 +1,99 @@
+/* Bright custom cursor — desktop/fine-pointer only. */
+.cursor-dot,
+.cursor-halo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 2147483647;
+  opacity: 0;
+  transform: translate3d(-100px, -100px, 0) translate(-50%, -50%);
+  will-change: transform, width, height, opacity;
+}
+
+@media (pointer: fine) {
+  html.custom-cursor,
+  html.custom-cursor body,
+  html.custom-cursor a,
+  html.custom-cursor button,
+  html.custom-cursor input,
+  html.custom-cursor label,
+  html.custom-cursor [role="button"] {
+    cursor: none !important;
+  }
+
+  .cursor-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 999px;
+    background: #fff;
+    box-shadow: 0 0 14px rgba(255,255,255,.38);
+    mix-blend-mode: difference;
+    transition:
+      width .22s cubic-bezier(.22,1,.36,1),
+      height .22s cubic-bezier(.22,1,.36,1),
+      border-radius .22s cubic-bezier(.22,1,.36,1),
+      opacity .16s ease,
+      box-shadow .22s ease;
+  }
+
+  .cursor-halo {
+    width: 28px;
+    height: 28px;
+    border: 1px solid rgba(255,255,255,.68);
+    border-radius: 999px;
+    background: rgba(255,255,255,.015);
+    mix-blend-mode: difference;
+    transition:
+      width .28s cubic-bezier(.22,1,.36,1),
+      height .28s cubic-bezier(.22,1,.36,1),
+      border-color .2s ease,
+      background .2s ease,
+      opacity .16s ease;
+  }
+
+  html.cursor-visible .cursor-dot,
+  html.cursor-visible .cursor-halo { opacity: 1; }
+
+  /* Links / buttons: larger bright target, still restrained. */
+  html.cursor-link .cursor-dot {
+    width: 6px;
+    height: 6px;
+    box-shadow: 0 0 18px rgba(255,255,255,.58);
+  }
+  html.cursor-link .cursor-halo {
+    width: 44px;
+    height: 44px;
+    border-color: rgba(255,255,255,.92);
+    background: rgba(255,255,255,.08);
+  }
+
+  /* Text: become a clean bright caret so selecting copy still feels natural. */
+  html.cursor-text .cursor-dot {
+    width: 2px;
+    height: 24px;
+    border-radius: 2px;
+    box-shadow: 0 0 10px rgba(255,255,255,.32);
+  }
+  html.cursor-text .cursor-halo {
+    width: 12px;
+    height: 30px;
+    opacity: .22;
+    border-color: rgba(255,255,255,.45);
+  }
+
+  html.cursor-down .cursor-dot {
+    width: 11px;
+    height: 11px;
+  }
+  html.cursor-down .cursor-halo {
+    width: 24px;
+    height: 24px;
+    background: rgba(255,255,255,.16);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cursor-dot,
+  .cursor-halo { transition: none !important; }
+}

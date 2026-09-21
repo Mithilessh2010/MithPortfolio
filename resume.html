@@ -3,146 +3,31 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Resume for student software developer Mithilessh Bhasker." />
-    <title>Mithilessh Bhasker — Resume</title>
-    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+    <title>Resume — Mithilessh Bhasker</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="resume.css" />
-  </head>
+    <link rel="stylesheet" href="cursor.css" />
+</head>
   <body>
-    <div class="resume-cursor" aria-hidden="true"></div>
-    <nav class="resume-nav" aria-label="Resume controls">
-      <a href="index.html">← Back to portfolio</a>
-      <button type="button" onclick="window.print()">Save as PDF</button>
-    </nav>
-
-    <main class="resume-sheet">
-      <header class="resume-header">
-        <div class="resume-identity">
-          <img class="resume-photo" src="assets/profile.png" alt="Mithilessh Bhasker" />
-          <div>
-          <p class="overline">Student software developer</p>
-          <h1>Mithilessh<br />Bhasker</h1>
-          </div>
+    <main class="resume-shell">
+      <a class="back-link" href="/">← Back to portfolio</a>
+      <section class="resume-hero">
+        <div>
+          <p class="eyebrow">RESUME</p>
+          <h1>Mithilessh Bhasker</h1>
+          <p>Student developer focused on robotics, software, and project-based learning.</p>
         </div>
-        <div class="contact-list">
-          <a href="mailto:mithilesshb@gmail.com">mithilesshb@gmail.com</a>
-          <a href="https://github.com/Mithilessh2010">github.com/Mithilessh2010</a>
-          <span>Pleasanton, California</span>
-          <span>Class of 2029</span>
-          <a href="index.html">Portfolio ↗</a>
+        <div class="resume-actions">
+          <a href="/Mithilessh-Bhasker-Resume.pdf" download>Download PDF ↘</a>
+          <a href="https://mithib.com">mithib.com ↗</a>
         </div>
-      </header>
-
-      <div class="resume-focus" aria-label="Professional focus">
-        <span>Robotics software</span><i></i><span>Autonomous systems</span><i></i><span>Product development</span>
-      </div>
-
-      <div class="resume-grid">
-        <section class="resume-main">
-          <article>
-            <h2>Profile</h2>
-            <p>Student software developer with hands-on experience in FTC robotics, autonomous pathing, hardware prototyping, and web product development. Known for turning early concepts into dependable tools, documenting technical work clearly, and contributing effectively within a team.</p>
-          </article>
-
-          <article>
-            <h2>Experience</h2>
-            <div class="entry entry-featured">
-              <span class="entry-index">01</span>
-              <div class="entry-heading"><h3>Software Team · Robo Racers 16481</h3><span>FTC Robotics</span></div>
-              <p>Develop and test FTC Java robot software, tune autonomous paths, analyze telemetry, and prepare reliable movement systems for competition.</p>
-            </div>
-            <div class="entry">
-              <span class="entry-index">02</span>
-              <div class="entry-heading"><h3>Co-Founder · Equal Horizons</h3><span>Nonprofit leadership</span></div>
-              <p>Co-founded a student-led nonprofit exploring affordable, accessible assistive technology through community research, product planning, and early prototyping.</p>
-            </div>
-            <div class="entry">
-              <span class="entry-index">03</span>
-              <div class="entry-heading"><h3><a href="https://github.com/pulls?q=is%3Apr+author%3AMithilessh2010+archived%3Afalse+org%3APedro-Pathing+is%3Amerged" target="_blank" rel="noreferrer">Beta Tester &amp; Contributor · Pedro Pathing</a></h3><span>Open source robotics</span></div>
-              <p>Earned 12 merged pull requests across the official Quickstart and Docs: built two-wheel + IMU and three-wheel auto-tuners, fixed tuner behavior, and authored guidance for tuning, coordinates, Bézier curves, constraints, and pathing.</p>
-            </div>
-            <div class="entry">
-              <span class="entry-index">04</span>
-              <div class="entry-heading"><h3>Kumon Instructor &amp; Reading Program Completer</h3><span>2 years</span></div>
-              <p>Completed the full Kumon Reading Program before becoming an instructor. Support students in mathematics and reading, assess assignments, explain corrections, and help learners build accuracy, independence, and confidence.</p>
-            </div>
-          </article>
-
-          <article class="credentials-section">
-            <div class="section-title-row">
-              <h2>Certifications &amp; distinctions</h2>
-              <span>Selected credentials</span>
-            </div>
-            <div class="credential-grid">
-              <article class="credential-card credential-featured">
-                <img src="assets/awards/kumon-reading.png" alt="Kumon Reading Program completion certificate" />
-                <div><span>Program completion · July 2023</span><h3>Kumon Reading Program Completer</h3><p>Completed the full reading curriculum, demonstrating long-term academic discipline and advanced reading comprehension.</p></div>
-              </article>
-              <article class="credential-card">
-                <img src="assets/certifications/cs50x.png" alt="Harvard CS50x certificate" />
-                <div><span>Computer science</span><h3>Harvard CS50x</h3><p>Introduction to Computer Science.</p></div>
-              </article>
-              <article class="credential-card">
-                <img src="assets/certifications/ibm-cybersecurity.png" alt="IBM Cybersecurity Fundamentals certificate" />
-                <div><span>Cybersecurity</span><h3>IBM SkillsBuild</h3><p>Cybersecurity Fundamentals.</p></div>
-              </article>
-              <article class="credential-card">
-                <img src="assets/certifications/nasa-remote-sensing.png" alt="NASA ARSET Remote Sensing certificate" />
-                <div><span>Earth science</span><h3>NASA ARSET</h3><p>Fundamentals of Remote Sensing.</p></div>
-              </article>
-              <article class="credential-card">
-                <img src="assets/awards/ftc-think-award.png" alt="FTC Think Award" />
-                <div><span>Robotics · 2025</span><h3>FTC Think Award</h3><p>Robo Racers 16481.</p></div>
-              </article>
-              <article class="credential-card">
-                <img src="assets/awards/aops-algebra-2.png" alt="AoPS Algebra 2 first-place award" />
-                <div><span>Mathematics · 2024–25</span><h3>1st Place · Algebra 2</h3><p>AoPS Academy.</p></div>
-              </article>
-            </div>
-          </article>
-
-          <article>
-            <h2>Selected projects</h2>
-            <div class="project-entry"><span>01</span><div><div class="entry-heading"><h3>Streaming Hackpad</h3><span>2026</span></div><p>Custom RP2040 PCB with mechanical keys, rotary input, addressable LEDs, an OLED, and a three-part printed enclosure.</p></div></div>
-            <div class="project-entry"><span>02</span><div><div class="entry-heading"><h3>Wireless Split Keyboard</h3><span>2026</span></div><p>60-key ergonomic keyboard designed in Fusion 360 and KiCad with CircuitPython and KMK firmware.</p></div></div>
-            <div class="project-entry"><span>03</span><div><div class="entry-heading"><h3>Pulse</h3><span>2026</span></div><p>Team command center for tasks, approvals, expenses, updates, meetings, and follow-ups.</p></div></div>
-          </article>
-        </section>
-
-        <aside>
-          <article>
-            <h2>Education</h2>
-            <h3>Amador Valley High School</h3>
-            <p>Pleasanton, California<br />Class of 2029</p>
-          </article>
-          <article>
-            <h2>Skills</h2>
-            <ul class="skill-list"><li>Java</li><li>TypeScript</li><li>JavaScript</li><li>Python</li><li>React</li><li>Next.js</li><li>FTC robotics</li><li>Pedro Pathing</li><li>KiCad</li><li>Fusion 360</li></ul>
-          </article>
-          <article>
-            <h2>Additional honors</h2>
-            <p><strong>1st Place · Contest Math</strong><br />AoPS Academy · 2025–26</p>
-            <p><strong>Hack Club Stardance</strong><br />Project recognition</p>
-          </article>
-        </aside>
-      </div>
+      </section>
+      <section class="resume-frame">
+        <iframe src="/Mithilessh-Bhasker-Resume.pdf#view=FitH" title="Mithilessh Bhasker resume PDF preview"></iframe>
+      </section>
     </main>
-    <script>
-      const cursor = document.querySelector('.resume-cursor');
-      if (matchMedia('(hover: hover) and (pointer: fine)').matches) {
-        document.body.classList.add('has-cursor');
-        addEventListener('pointermove', (event) => {
-          cursor.style.left = `${event.clientX}px`;
-          cursor.style.top = `${event.clientY}px`;
-          cursor.classList.toggle('over-link', Boolean(event.target.closest('a, button')));
-          cursor.classList.add('visible');
-        }, { passive: true });
-        addEventListener('pointerdown', () => cursor.classList.add('down'));
-        addEventListener('pointerup', () => cursor.classList.remove('down'));
-      }
-    </script>
-  </body>
+    <script src="cursor.js" defer></script>
+</body>
 </html>

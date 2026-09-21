@@ -3,34 +3,44 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#080a0b" />
-    <meta name="description" content="Project details from Mithilessh Bhasker's portfolio." />
     <title>Project — Mithilessh Bhasker</title>
-    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="project.css" />
     <script src="project-page.js" defer></script>
-  </head>
+    <link rel="stylesheet" href="cursor.css" />
+</head>
   <body>
-    <div class="project-cursor" aria-hidden="true"></div>
-    <header class="project-nav">
-      <a class="project-brand" href="index.html#projects">
-        <span class="project-brand-dot" aria-hidden="true"></span>
-        <span>Mithilessh</span>
-      </a>
-      <a class="back-link" href="index.html#projects">← back to projects</a>
-    </header>
+    <main class="project-shell">
+      <a class="back-link" href="/">← Back to portfolio</a>
+      <section class="project-hero">
+        <div class="project-kicker">CASE STUDY <span id="project-number">01</span></div>
+        <h1 id="project-title">Project</h1>
+        <p id="project-description">A closer look at one of Mithilessh’s projects, with quick context, stack, and source links.</p>
+        <div class="project-actions">
+          <a href="#" id="project-source" hidden target="_blank" rel="noreferrer">View source ↗</a>
+          <a href="/Mithilessh-Bhasker-Resume.pdf" download>Download resume PDF ↘</a>
+        </div>
+      </section>
 
-    <main>
-      <p class="project-label"><span id="project-number">00</span> / PROJECT DETAILS</p>
-      <h1 id="project-title">Project</h1>
-      <section class="soon-panel" aria-labelledby="soon-title">
-        <span>STATUS / IN PROGRESS</span>
-        <h2 id="soon-title">soon to come.</h2>
-        <a id="project-source" class="project-source" href="#" target="_blank" rel="noreferrer" hidden>View source on GitHub ↗</a>
+      <section class="project-grid">
+        <article class="project-panel">
+          <img id="project-main-image" src="assets/projects/hackpad-main.png" alt="Project preview" />
+        </article>
+        <article class="project-panel info-panel">
+          <h2>Overview</h2>
+          <p id="project-overview">More details coming soon. For now, check the source link and the main portfolio page for the full visual story.</p>
+          <div class="info-list">
+            <div><span>Role</span><strong id="project-role">Builder</strong></div>
+            <div><span>Category</span><strong id="project-category">Project</strong></div>
+            <div><span>Focus</span><strong id="project-focus">Learning by building</strong></div>
+          </div>
+          <pre><code id="project-code">// project notes
+// more details soon</code></pre>
+        </article>
       </section>
     </main>
-  </body>
+    <script src="cursor.js" defer></script>
+</body>
 </html>
