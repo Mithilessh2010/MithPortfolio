@@ -1,33 +1,138 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Resume — Mithilessh Bhasker</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="resume.css" />
-    <link rel="stylesheet" href="cursor.css" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="The résumé of Mithilessh Bhasker — student developer, robotics software lead, open-source contributor, builder, and program completer." />
+  <meta name="theme-color" content="#111328" />
+  <title>Résumé — Mithilessh Bhasker</title>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="resume.css" />
+  <link rel="stylesheet" href="cursor.css" />
 </head>
-  <body>
-    <main class="resume-shell">
-      <a class="back-link" href="/">← Back to portfolio</a>
-      <section class="resume-hero">
-        <div>
-          <p class="eyebrow">RESUME</p>
-          <h1>Mithilessh Bhasker</h1>
-          <p>Student developer focused on robotics, software, and project-based learning.</p>
+<body>
+  <div class="color-wash" aria-hidden="true"></div>
+  <header class="resume-nav">
+    <a class="back-link" href="/">← Portfolio</a>
+    <span>Résumé · 2026</span>
+    <a class="download-small" href="/Mithilessh-Bhasker-Resume.pdf" download>Download PDF ↓</a>
+  </header>
+
+  <main class="resume-shell">
+    <section class="resume-hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Student developer · Pleasanton, California</p>
+        <h1>Mithilessh<br /><em>Bhasker.</em></h1>
+        <p class="hero-summary">I build software that moves—from competition robots and autonomous pathing tools to custom hardware and accessible product ideas.</p>
+        <div class="role-strip" aria-label="Roles">
+          <span>Robotics Software Lead</span>
+          <span>Open-Source Contributor</span>
+          <span>Program Completer</span>
         </div>
-        <div class="resume-actions">
-          <a href="/Mithilessh-Bhasker-Resume.pdf" download>Download PDF ↘</a>
-          <a href="https://mithib.com">mithib.com ↗</a>
-        </div>
-      </section>
-      <section class="resume-frame">
-        <iframe src="/Mithilessh-Bhasker-Resume.pdf#view=FitH" title="Mithilessh Bhasker resume PDF preview"></iframe>
-      </section>
-    </main>
-    <script src="cursor.js" defer></script>
+      </div>
+      <aside class="hero-card">
+        <img src="assets/pfp.jpg" alt="Mithilessh Bhasker" />
+        <div><span>Currently focused on</span><strong>Autonomy, hardware, and useful software.</strong></div>
+      </aside>
+    </section>
+
+    <section class="resume-stats" aria-label="Highlights">
+      <div><strong>12</strong><span>Merged Pedro Pathing pull requests</span></div>
+      <div><strong>4</strong><span>Featured hardware + software projects</span></div>
+      <div><strong>8</strong><span>Certificates + personal distinctions</span></div>
+      <div><strong>16481</strong><span>FTC Robo Racers team</span></div>
+    </section>
+
+    <div class="resume-layout">
+      <div class="main-column">
+        <section class="resume-section">
+          <div class="section-heading"><span>01</span><h2>Experience</h2></div>
+          <article class="entry featured-entry">
+            <div class="entry-top"><div><p class="entry-label">Robo Racers · FTC Team 16481</p><h3>Software Lead</h3></div><span class="entry-tag">Robotics</span></div>
+            <p>I lead autonomous software development for a competition robot, translating match strategy into repeatable motion on a real field.</p>
+            <ul>
+              <li>Build and tune autonomous routes around scoring positions, obstacles, timing, and robot orientation.</li>
+              <li>Use localization, pose, heading, path state, and timing telemetry to diagnose problems instead of guessing.</li>
+              <li>Iterate through testing and field debugging until robot behavior is reliable across repeated runs.</li>
+            </ul>
+          </article>
+          <article class="entry">
+            <div class="entry-top"><div><p class="entry-label">Pedro Pathing · Open source</p><h3>Contributor + Beta Tester</h3></div><span class="entry-tag coral">12 merged PRs</span></div>
+            <p>Contribute to the Quickstart and documentation used by FTC teams to configure localization, tune motion, and build autonomous routines.</p>
+            <ul>
+              <li>Shipped four Quickstart changes involving two-wheel and three-wheel tuners, auto-tuning, and hardware configuration.</li>
+              <li>Delivered eight documentation improvements covering localization, coordinates, Bézier curves, constraints, and setup clarity.</li>
+              <li>Fixed practical setup friction so advanced autonomy tools are easier for other student teams to understand and use.</li>
+            </ul>
+          </article>
+          <article class="entry">
+            <div class="entry-top"><div><p class="entry-label">Equal Horizons · Assistive technology</p><h3>Co-founder</h3></div><span class="entry-tag green">Product</span></div>
+            <p>Help shape product direction, research questions, early prototypes, and communication for a student-founded assistive-technology initiative centered on affordability and accessibility.</p>
+          </article>
+        </section>
+
+        <section class="resume-section">
+          <div class="section-heading"><span>02</span><h2>Selected Projects</h2></div>
+          <div class="project-grid">
+            <a href="/project.html?project=streaming-hackpad"><span>Hardware · Firmware</span><h3>Streaming Hackpad</h3><p>A compact macro controller for streaming and media workflows.</p><b>View project ↗</b></a>
+            <a href="/project.html?project=custom-devboard"><span>PCB · Electronics</span><h3>Custom Dev Board</h3><p>Board-level prototyping, electronics planning, and system iteration.</p><b>View project ↗</b></a>
+            <a href="/project.html?project=split-keyboard"><span>Hardware · Input</span><h3>Wireless Split Keyboard</h3><p>An exploration of ergonomic layout and wireless interaction.</p><b>View project ↗</b></a>
+            <a href="/project.html?project=pulse"><span>Web · Frontend</span><h3>Pulse</h3><p>A clean product interface designed for fast-moving teams.</p><b>View project ↗</b></a>
+          </div>
+        </section>
+
+        <section class="resume-section">
+          <div class="section-heading"><span>03</span><h2>Recognition</h2></div>
+          <div class="recognition-list">
+            <div><span>FIRST Tech Challenge</span><strong>Control Award · Think Award · Connect Award</strong></div>
+            <div><span>FTC Premier Events</span><strong>Sustain Award, 3rd · Enrico Fermi Discovery Award, 2nd</strong></div>
+            <div><span>Art of Problem Solving</span><strong>Algebra 2, 1st Place · Contest Math, 1st Place</strong></div>
+          </div>
+        </section>
+      </div>
+
+      <aside class="side-column">
+        <section class="side-card contact-card">
+          <p class="eyebrow">Contact</p>
+          <a href="mailto:mithilesshb@gmail.com">mithilesshb@gmail.com ↗</a>
+          <a href="https://github.com/Mithilessh2010" target="_blank" rel="noreferrer">github.com/Mithilessh2010 ↗</a>
+          <a href="https://mithib.com" target="_blank" rel="noreferrer">mithib.com ↗</a>
+        </section>
+        <section class="side-card skills-card">
+          <p class="eyebrow">Technical toolkit</p>
+          <div><span>Languages</span><strong>Java · Python · JavaScript · TypeScript</strong></div>
+          <div><span>Web</span><strong>React · Next.js · Vite · Tailwind CSS</strong></div>
+          <div><span>Robotics</span><strong>FTC SDK · Pedro Pathing · localization · telemetry</strong></div>
+          <div><span>Hardware</span><strong>PCB design · firmware · prototyping</strong></div>
+          <div><span>Tools</span><strong>GitHub · Supabase</strong></div>
+        </section>
+        <section class="side-card program-card">
+          <p class="eyebrow">Program completion</p>
+          <div class="program-mark">✓</div>
+          <h3>Kumon Reading Program Completer</h3>
+          <p>Completed the Kumon Reading Program, demonstrating sustained independent study, reading comprehension, and long-term academic commitment.</p>
+        </section>
+        <section class="side-card learning-card">
+          <p class="eyebrow">Certificates</p>
+          <ul>
+            <li><strong>CS50x</strong><span>Harvard University</span></li>
+            <li><strong>Cybersecurity Fundamentals</strong><span>IBM SkillsBuild</span></li>
+            <li><strong>Remote Sensing</strong><span>NASA ARSET</span></li>
+            <li><strong>Stardance Challenge</strong><span>Hack Club</span></li>
+          </ul>
+        </section>
+      </aside>
+    </div>
+
+    <section class="download-banner">
+      <div><p class="eyebrow">Take it with you</p><h2>Want the printable version?</h2><p>Download a clean PDF copy for applications, referrals, or offline reading.</p></div>
+      <a href="/Mithilessh-Bhasker-Resume.pdf" download>Download résumé PDF <span>↓</span></a>
+    </section>
+  </main>
+  <footer><span>© 2026 Mithilessh Bhasker</span><a href="/">Back to portfolio ↑</a></footer>
+  <script src="cursor.js" defer></script>
 </body>
 </html>
