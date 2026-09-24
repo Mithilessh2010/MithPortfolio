@@ -12,8 +12,12 @@ const ADD_VISITOR = `
 `;
 
 function getRedisCredentials() {
-  const url = process.env.UPSTASH_REDIS_REST_URL || process.env.KV_REST_API_URL;
-  const token = process.env.UPSTASH_REDIS_REST_TOKEN || process.env.KV_REST_API_TOKEN;
+  const url = process.env.UPSTASH_REDIS_REST_URL
+    || process.env.KV_REST_API_URL
+    || process.env.UPSTASH_REDIS_REST_KV_REST_API_URL;
+  const token = process.env.UPSTASH_REDIS_REST_TOKEN
+    || process.env.KV_REST_API_TOKEN
+    || process.env.UPSTASH_REDIS_REST_KV_REST_API_TOKEN;
 
   return url && token ? { url, token } : null;
 }
@@ -44,9 +48,6 @@ export default async function handler(request, response) {
 
   const credentials = getRedisCredentials();
   if (!credentials) {
-    console.error("View counter storage keys", {
-      keys: Object.keys(process.env).filter((key) => /UPSTASH|REDIS|KV|STORAGE/.test(key)).sort(),
-    });
     return response.status(503).json({ error: "View counter storage is not configured" });
   }
 
