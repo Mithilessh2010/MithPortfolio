@@ -114,13 +114,18 @@ const scrollLine = qs('#scroll-line');
 
 function showVisitorIncrement(){
   if(reduceMotion)return;
-  const toast=document.createElement('span');
-  toast.className='visitor-increment-toast';
-  toast.setAttribute('aria-hidden','true');
-  toast.innerHTML='<b>+1</b><small>unique visitor</small>';
-  document.body.append(toast);
-  requestAnimationFrame(()=>toast.classList.add('is-visible'));
-  toast.addEventListener('animationend',()=>toast.remove(),{once:true});
+  const wrap=qs('#visitor-count-wrap');
+  if(!wrap)return;
+  const increment=document.createElement('i');
+  increment.className='visitor-increment';
+  increment.setAttribute('aria-hidden','true');
+  increment.textContent='+1';
+  wrap.append(increment);
+  requestAnimationFrame(()=>wrap.classList.add('is-incrementing'));
+  increment.addEventListener('animationend',()=>{
+    increment.remove();
+    wrap.classList.remove('is-incrementing');
+  },{once:true});
 }
 
 // Count this browser once, even when the homepage is refreshed or revisited.
