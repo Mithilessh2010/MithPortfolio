@@ -44,6 +44,9 @@ export default async function handler(request, response) {
 
   const credentials = getRedisCredentials();
   if (!credentials) {
+    console.error("View counter storage keys", {
+      keys: Object.keys(process.env).filter((key) => /UPSTASH|REDIS|KV|STORAGE/.test(key)).sort(),
+    });
     return response.status(503).json({ error: "View counter storage is not configured" });
   }
 
