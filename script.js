@@ -111,6 +111,41 @@ addEventListener('keydown',(e)=>{ if(e.key==='Escape' && menu?.classList.contain
 
 const year = qs('#year'); if(year) year.textContent = new Date().getFullYear();
 const scrollLine = qs('#scroll-line');
+
+function showVisitorIncrement(){
+  if(reduceMotion)return;
+  const toast=document.createElement('span');
+  toast.className='visitor-increment-toast';
+  toast.setAttribute('aria-hidden','true');
+  toast.innerHTML='<b>+1</b><small>unique visitor</small>';
+  document.body.append(toast);
+  requestAnimationFrame(()=>toast.classList.add('is-visible'));
+  toast.addEventListener('animationend',()=>toast.remove(),{once:true});
+}
+
+// Count this browser once, even when the homepage is refreshed or revisited.
+async function updateVisitorCount(){
+  const wrap=qs('#visitor-count-wrap');
+  const value=qs('#visitor-count');
+  if(!wrap||!value)return;
+
+  try{
+    const response=await fetch('/api/views',{method:'POST',credentials:'same-origin',cache:'no-store'});
+    if(!response.ok)throw new Error(`View counter returned ${response.status}`);
+    const data=await response.json();
+    if(!Number.isSafeInteger(data.count)||data.count<0)throw new Error('Invalid view count');
+
+    value.textContent=new Intl.NumberFormat().format(data.count);
+    wrap.hidden=false;
+    wrap.setAttribute('aria-label',`${data.count} unique ${data.count===1?'visitor':'visitors'}`);
+    if(data.newVisitor===true)showVisitorIncrement();
+  }catch(error){
+    // Keep the optional counter hidden if storage is not configured or unavailable.
+    console.warn('Unique visitor count unavailable',error);
+  }
+}
+updateVisitorCount();
+
 function updateScroll(){
   const max = Math.max(1, document.documentElement.scrollHeight - innerHeight);
   if(scrollLine) scrollLine.style.width = `${Math.min(100, scrollY/max*100)}%`;

@@ -20,6 +20,17 @@ npm run build:vercel
 python3 -m http.server 8080 -d public
 ```
 
+## Unique visitor counter
+
+The homepage counter uses an HttpOnly browser cookie and an Upstash Redis set, so refreshing or revisiting from the same browser does not increase the count. Connect an Upstash Redis integration to the Vercel project so these environment variables are available:
+
+```text
+UPSTASH_REDIS_REST_URL
+UPSTASH_REDIS_REST_TOKEN
+```
+
+The counter stays hidden when storage is not configured. Use `vercel dev` instead of the static Python server to test the API locally.
+
 ## Validate
 
 ```bash
