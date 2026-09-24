@@ -11,6 +11,13 @@ const ADD_VISITOR = `
   return {added, count}
 `;
 
+function getRedisCredentials() {
+  const url = process.env.UPSTASH_REDIS_REST_URL || process.env.KV_REST_API_URL;
+  const token = process.env.UPSTASH_REDIS_REST_TOKEN || process.env.KV_REST_API_TOKEN;
+
+  return url && token ? { url, token } : null;
+}
+
 function getCookie(cookieHeader, name) {
   if (!cookieHeader) return null;
 
@@ -35,7 +42,8 @@ export default async function handler(request, response) {
     return response.status(405).json({ error: "Method not allowed" });
   }
 
-  if (!process.env.UPSTASH_REDIS_REST_URL || !process.env.UPSTASH_REDIS_REST_TOKEN) {
+  const credentials = getRedisCredentials();
+  if (!credentials) {
     return response.status(503).json({ error: "View counter storage is not configured" });
   }
 
@@ -54,7 +62,7 @@ export default async function handler(request, response) {
   const visitorHash = createHash("sha256").update(visitorId).digest("hex");
 
   try {
-    const redis = Redis.fromEnv();
+    const redis = new Redis(credentials);
     const result = await redis.eval(ADD_VISITOR, [VISITOR_SET], [visitorHash]);
     const [added, count] = Array.isArray(result) ? result : [0, result];
 

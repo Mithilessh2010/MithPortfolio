@@ -29,6 +29,8 @@ UPSTASH_REDIS_REST_URL
 UPSTASH_REDIS_REST_TOKEN
 ```
 
+The Vercel Marketplace integration may instead inject `KV_REST_API_URL` and `KV_REST_API_TOKEN`; the endpoint supports both naming schemes.
+
 The counter stays hidden when storage is not configured. Use `vercel dev` instead of the static Python server to test the API locally.
 
 ## Validate
