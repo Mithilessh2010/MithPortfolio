@@ -17,7 +17,7 @@ const cursorJs = await readFile(resolve(root,"cursor.js"),"utf8");
 const pageFiles = ["index.html","robotics.html","pedro.html","equal-horizons.html","projects.html","recognition.html","about.html","project.html","resume.html"];
 const localImages = [
   "assets/favicon.svg","assets/profile.png","assets/pfp.jpg","assets/robot/roboracers-cutout.png",
-  "assets/certifications/cs50x.png","assets/certifications/ibm-cybersecurity.png","assets/certifications/nasa-remote-sensing.png","assets/certifications/hack-club-stardance.png",
+  "assets/certifications/cs50x.png","assets/certifications/ibm-cybersecurity.png","assets/certifications/nasa-remote-sensing.png","assets/certifications/nasa-reservoir-management.png","assets/certifications/hack-club-stardance.png",
   "assets/projects/hackpad-main.png","assets/projects/hackpad-detail.png","assets/projects/devboard-main.png","assets/projects/devboard-detail.png","assets/projects/keyboard-main.png","assets/projects/keyboard-detail.png","assets/projects/pulse-home.png","assets/projects/pulse-mobile.png",
   "assets/logos/pedro-pathing.svg","assets/logos/stang-hacks.webp","assets/logos/pulse.svg","assets/logos/equal-horizons.svg","assets/logos/breathe.jpg","assets/logos/java.svg","assets/logos/typescript.svg","assets/logos/javascript.svg","assets/logos/react.svg","assets/logos/python.svg","assets/logos/nextjs.svg","assets/logos/tailwind.svg","assets/logos/github.svg","assets/logos/vite.svg","assets/logos/supabase.svg","assets/logos/robo-racers.png",
   "assets/awards/ftc-think-award.png","assets/awards/aops-algebra-2.png","assets/awards/aops-contest-math.png","assets/awards/kumon-reading.png"
