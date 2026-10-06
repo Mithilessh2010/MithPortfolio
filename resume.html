@@ -3,129 +3,199 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="The one-page résumé of Mithilessh Bhasker — student developer, robotics software lead, open-source contributor, and hardware builder." />
-  <meta name="theme-color" content="#111328" />
+  <meta name="description" content="Résumé of Mithilessh Bhasker — robotics software lead, open-source contributor, and student developer." />
+  <meta name="theme-color" content="#0d1021" />
   <title>Résumé — Mithilessh Bhasker</title>
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="resume.css" />
-  <link rel="stylesheet" href="ui-refresh.css" />
   <link rel="stylesheet" href="cursor.css" />
 </head>
 <body>
-  <header class="viewer-bar">
-    <a href="/">← Back to portfolio</a>
-    <p><span></span> One-page résumé</p>
-    <a class="download-button" href="/Mithilessh-Bhasker-Resume.pdf" download>Download this page <b>↓</b></a>
+  <header class="resume-nav">
+    <a class="back-link" href="/">← Portfolio</a>
+    <span class="nav-label">Résumé</span>
+    <a class="download-link" href="/Mithilessh-Bhasker-Resume.pdf" download>Download PDF ↓</a>
   </header>
 
-  <main class="resume-viewer">
-    <article class="resume-page" aria-label="Mithilessh Bhasker one-page résumé">
-      <header class="resume-header">
-        <div>
-          <p class="kicker">Student developer · Robotics · Pleasanton, California</p>
-          <h1><strong>Mithilessh</strong> <em>Bhasker.</em></h1>
-          <p class="summary">Student developer focused on robotics, open-source tools, and hands-on hardware. I like building real systems, testing them, and improving them until they work reliably.</p>
-        </div>
-        <div class="contact-block">
+  <main class="resume-shell">
+    <section class="resume-hero">
+      <div class="hero-copy">
+        <p class="eyebrow">STUDENT DEVELOPER · ROBOTICS · OPEN SOURCE</p>
+        <h1>Mithilessh <span>Bhasker</span></h1>
+        <p class="hero-role">Software Lead at <strong>FTC Robo Racers #16481</strong></p>
+        <p class="hero-summary">I build software and hardware that actually gets used — from autonomous robot systems and open-source FTC tooling to custom electronics and web projects.</p>
+        <div class="hero-links">
           <a href="mailto:mithilesshb@gmail.com">mithilesshb@gmail.com</a>
           <a href="https://mithib.com">mithib.com</a>
-          <a href="https://github.com/Mithilessh2010">github.com/Mithilessh2010</a>
+          <a href="https://github.com/Mithilessh2010">GitHub ↗</a>
         </div>
-      </header>
-
-      <div class="highlight-row">
-        <div><strong>12</strong><span>Merged open-source PRs</span></div>
-        <div><strong>4</strong><span>Featured projects</span></div>
-        <div><strong>2 yrs</strong><span>Kumon instructor</span></div>
-        <div><strong>16481</strong><span>FTC Robo Racers</span></div>
       </div>
 
-      <div class="resume-columns">
-        <div class="primary-column">
-          <section class="resume-section">
-            <h2><span>01</span> Experience</h2>
-            <article class="experience-item">
-              <div class="item-heading"><div><p>Robo Racers · FTC Team 16481</p><h3>Software Lead</h3></div><b>Robotics</b></div>
-              <p>Lead autonomous software for an FTC competition robot and turn match strategy into working field routines.</p>
-              <ul>
-                <li>Write and tune autonomous routes around scoring positions, timing, obstacles, and robot orientation.</li>
-                <li>Use pose, heading, localization, and telemetry to track down problems during field testing.</li>
-                <li>Adjust software as match strategy and robot hardware change throughout the season.</li>
-              </ul>
-            </article>
-            <article class="experience-item">
-              <div class="item-heading"><div><p>Pedro Pathing · Open source</p><h3>Contributor + Beta Tester</h3></div><b>12 merged PRs</b></div>
-              <p>Contribute to the Pedro Pathing Quickstart and documentation used by FTC teams building autonomous routines.</p>
-              <ul>
-                <li>Contributed 12 merged pull requests across Quickstart code and documentation.</li>
-                <li>Worked on tuners, auto-tuning, localization, coordinates, Bézier curves, constraints, and setup guidance.</li>
-              </ul>
-            </article>
-            <article class="experience-item">
-              <div class="item-heading"><div><p>Education · Instruction + Achievement</p><h3>Kumon</h3></div><b>Reading Program Completer</b></div>
-              <p>Worked as a Kumon instructor for two years while also completing the full Kumon Reading Program.</p>
-              <ul>
-                <li>Helped students work independently by explaining concepts, checking assignments, and giving focused feedback.</li>
-                <li>Strengthened reading comprehension, vocabulary, analysis, and time-management through program completion.</li>
-              </ul>
-            </article>
-            <article class="experience-item compact-item">
-              <div class="item-heading"><div><p>Equal Horizons · Assistive technology</p><h3>Co-founder</h3></div><b>Product</b></div>
-              <p>Help research affordable assistive-technology ideas and turn them into early prototypes and product concepts.</p>
-            </article>
-          </section>
+      <div class="impact-panel" aria-label="Top accomplishments">
+        <div class="impact-card primary-impact">
+          <span class="impact-number">12</span>
+          <div><strong>Merged PRs</strong><small>Pedro Pathing</small></div>
+        </div>
+        <div class="impact-card">
+          <span class="impact-number">16481</span>
+          <div><strong>Software Lead</strong><small>FTC Robo Racers</small></div>
+        </div>
+        <div class="impact-card">
+          <span class="impact-number">3×</span>
+          <div><strong>FTC Awards</strong><small>Control · Think · Connect</small></div>
+        </div>
+      </div>
+    </section>
 
-          <section class="resume-section projects-section">
-            <h2><span>02</span> Selected Projects</h2>
-            <div class="project-list">
-              <div><span>Hardware · Firmware</span><strong>Streaming Hackpad</strong><p>A custom macro pad for streaming and media controls.</p></div>
-              <div><span>PCB · Electronics</span><strong>Custom Dev Board</strong><p>A custom PCB for electronics prototyping and testing.</p></div>
-              <div><span>Hardware · Input</span><strong>Wireless Split Keyboard</strong><p>A wireless split keyboard focused on comfort and portability.</p></div>
-              <div><span>Web · Frontend</span><strong>Pulse</strong><p>A lightweight web interface for organizing fast-moving work.</p></div>
+    <section class="resume-grid">
+      <div class="main-column">
+        <section class="content-section">
+          <div class="section-heading">
+            <span>01</span>
+            <h2>Experience</h2>
+          </div>
+
+          <article class="experience-card featured-card">
+            <div class="experience-topline">
+              <div>
+                <p class="org-name">FTC ROBO RACERS · TEAM 16481</p>
+                <h3>Software Lead</h3>
+              </div>
+              <span class="role-pill">ROBOTICS</span>
             </div>
-          </section>
-        </div>
-
-        <aside class="secondary-column">
-          <section class="side-section skill-section">
-            <h2>Technical Toolkit</h2>
-            <dl>
-              <div><dt>Languages</dt><dd>Java, Python, JavaScript, TypeScript</dd></div>
-              <div><dt>Web</dt><dd>React, Next.js, Vite, Tailwind CSS</dd></div>
-              <div><dt>Robotics</dt><dd>FTC SDK, Pedro Pathing, localization, telemetry</dd></div>
-              <div><dt>Hardware</dt><dd>PCB design, firmware, prototyping</dd></div>
-              <div><dt>Tools</dt><dd>GitHub, Supabase</dd></div>
-            </dl>
-          </section>
-
-          <section class="side-section">
-            <h2>Certificates</h2>
-            <ul class="credential-list">
-              <li><strong>CS50x</strong><span>Harvard University</span></li>
-              <li><strong>Cybersecurity Fundamentals</strong><span>IBM SkillsBuild</span></li>
-              <li><strong>Remote Sensing</strong><span>NASA ARSET</span></li>
-              <li><strong>Earth Observations for Reservoir Management</strong><span>NASA ARSET</span></li>
-              <li><strong>Stardance Challenge</strong><span>Hack Club</span></li>
+            <p class="experience-intro">Lead autonomous software development for a competition robot, turning match strategy into reliable field performance.</p>
+            <ul>
+              <li><strong>Build and tune autonomous routes</strong> around scoring positions, obstacles, timing, and robot orientation.</li>
+              <li>Use localization, pose, heading, path state, and telemetry to diagnose failures.</li>
+              <li>Test and debug until autonomous behavior is repeatable across runs.</li>
             </ul>
-          </section>
+          </article>
 
-          <section class="side-section recognition-section">
-            <h2>Recognition</h2>
-            <ul class="credential-list">
-              <li><strong>Control · Think · Connect Awards</strong><span>FIRST Tech Challenge</span></li>
-              <li><strong>Sustain, 3rd · Fermi Discovery, 2nd</strong><span>FTC Premier Events</span></li>
-              <li><strong>Algebra 2 + Contest Math, 1st</strong><span>Art of Problem Solving</span></li>
+          <article class="experience-card">
+            <div class="experience-topline">
+              <div>
+                <p class="org-name">PEDRO PATHING · OPEN SOURCE</p>
+                <h3>Contributor + Beta Tester</h3>
+              </div>
+              <span class="role-pill standout-pill">12 MERGED PRs</span>
+            </div>
+            <p class="experience-intro">Contribute to the Quickstart and documentation used by FTC teams to tune, localize, and build autonomous routines.</p>
+            <ul>
+              <li><strong>4 Quickstart changes</strong> across two- and three-wheel tuners, auto-tuning, and configuration.</li>
+              <li><strong>8 documentation improvements</strong> covering localization, coordinates, Bézier curves, constraints, and setup.</li>
             </ul>
-          </section>
-        </aside>
+          </article>
+
+          <article class="experience-card compact-card">
+            <div class="experience-topline">
+              <div>
+                <p class="org-name">EQUAL HORIZONS · ASSISTIVE TECHNOLOGY</p>
+                <h3>Co-founder</h3>
+              </div>
+              <span class="role-pill">PRODUCT</span>
+            </div>
+            <p class="experience-intro">Work on research, product direction, early prototypes, and communication around affordable accessible technology.</p>
+          </article>
+
+          <article class="experience-card compact-card">
+            <div class="experience-topline">
+              <div>
+                <p class="org-name">KUMON</p>
+                <h3>Instructor · Reading Program Completer</h3>
+              </div>
+              <span class="role-pill">EDUCATION</span>
+            </div>
+            <p class="experience-intro">Worked as an instructor for two years while completing the full Kumon Reading Program.</p>
+          </article>
+        </section>
+
+        <section class="content-section">
+          <div class="section-heading">
+            <span>02</span>
+            <h2>Selected Projects</h2>
+          </div>
+          <div class="project-grid">
+            <article>
+              <p>HARDWARE · FIRMWARE</p>
+              <h3>Streaming Hackpad</h3>
+              <span>Custom macro controls for streaming and media workflows.</span>
+            </article>
+            <article>
+              <p>PCB · ELECTRONICS</p>
+              <h3>Custom Dev Board</h3>
+              <span>Board-level prototyping and system design.</span>
+            </article>
+            <article>
+              <p>HARDWARE · INPUT</p>
+              <h3>Wireless Split Keyboard</h3>
+              <span>Ergonomic hardware and wireless interaction.</span>
+            </article>
+            <article>
+              <p>WEB · FRONTEND</p>
+              <h3>Pulse</h3>
+              <span>Fast, clean interface work for team workflows.</span>
+            </article>
+          </div>
+        </section>
       </div>
-    </article>
+
+      <aside class="side-column">
+        <section class="side-card">
+          <p class="side-kicker">TECH STACK</p>
+          <h2>What I build with</h2>
+          <div class="skills-list">
+            <div><strong>Languages</strong><span>Java · Python · JavaScript · TypeScript</span></div>
+            <div><strong>Robotics</strong><span>FTC SDK · Pedro Pathing · Localization · Telemetry</span></div>
+            <div><strong>Web</strong><span>React · Next.js · Vite · Tailwind CSS</span></div>
+            <div><strong>Hardware</strong><span>PCB Design · Firmware · Prototyping</span></div>
+            <div><strong>Tools</strong><span>GitHub · Supabase</span></div>
+          </div>
+        </section>
+
+        <section class="side-card awards-card">
+          <p class="side-kicker">RECOGNITION</p>
+          <h2>Awards & wins</h2>
+          <div class="award-item">
+            <strong>Control · Think · Connect</strong>
+            <span>FIRST Tech Challenge</span>
+          </div>
+          <div class="award-item">
+            <strong>Sustain — 3rd</strong>
+            <span>FTC Premier Event</span>
+          </div>
+          <div class="award-item">
+            <strong>Fermi Discovery — 2nd</strong>
+            <span>FTC Premier Event</span>
+          </div>
+          <div class="award-item">
+            <strong>Algebra 2 + Contest Math — 1st</strong>
+            <span>Art of Problem Solving</span>
+          </div>
+        </section>
+
+        <section class="side-card certificates-card">
+          <p class="side-kicker">CERTIFICATES</p>
+          <h2>Learning</h2>
+          <ul>
+            <li><strong>CS50x</strong><span>Harvard University</span></li>
+            <li><strong>Cybersecurity Fundamentals</strong><span>IBM SkillsBuild</span></li>
+            <li><strong>Remote Sensing</strong><span>NASA ARSET</span></li>
+            <li><strong>Earth Observations for Reservoir Management</strong><span>NASA ARSET</span></li>
+            <li><strong>Stardance Challenge</strong><span>Hack Club</span></li>
+          </ul>
+        </section>
+      </aside>
+    </section>
   </main>
 
-  <footer class="viewer-footer"><span>The page you see is the PDF you download.</span><a href="/Mithilessh-Bhasker-Resume.pdf" download>Download PDF ↓</a></footer>
+  <footer class="resume-footer">
+    <span>Built by Mithilessh Bhasker</span>
+    <a href="/Mithilessh-Bhasker-Resume.pdf" download>Download résumé PDF ↓</a>
+  </footer>
+
   <script src="cursor.js" defer></script>
 </body>
 </html>
